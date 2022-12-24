@@ -1,0 +1,21 @@
+// 共通スタイル
+.Common{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+// react-router-dom Link フォント　スタイル
+.Link{
+    text-decoration: none;
+    color: #222;
+}
+
+// header横の要素 メイン
+.CommonDiv{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 140px; // SideHeaderのwidthの長さ
+}

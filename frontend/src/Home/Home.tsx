@@ -1,6 +1,12 @@
-import React from 'react'
 
-function Home() {
+
+function Home(props: { backURL: string }) {
+
+    // バックエンド 元URL
+    const url = props.backURL;
+
+    console.log(url)
+
     return (
         <div>
             Home

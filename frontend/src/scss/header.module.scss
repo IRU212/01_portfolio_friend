@@ -1,3 +1,31 @@
-.test{
-    display: none;
+$header-height: 52px;
+
+.Header{
+    width: 100%;
+    height: $header-height;
+    border-bottom: 0.7px solid #777;
+    position: relative;
+
+    .Home{
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        width: 100%;
+        transform: translateY(-50%);
+        font-size: 0.9rem;
+
+        &:hover{
+            cursor: pointer;
+        }
+
+    }
+}
+
+.SideHeader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 100vh;
+    border-right: 0.7px solid #777;
 }
