@@ -1,27 +1,20 @@
-import axios from "axios";
-import { useEffect } from "react";
+import { Route, Routes } from "react-router";
+import { BrowserRouter } from "react-router-dom";
+import Home from "./Home/Home";
 
 
 function App() {
 
-  useEffect(() => {
-    axios
-    .get("http://localhost:8000/api/test")
-    .then((res) => {
-      console.log(res.data)
-    })
-    .catch((err) => {
-      console.log(err)
-    })
-  },[])
-
   return (
     <div>
-      <div>
-        aaaaa
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
+
 }
 
 export default App;
