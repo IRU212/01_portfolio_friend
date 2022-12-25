@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\UserController;
 use App\Http\Controllers\TestController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get("/test",[TestController::class,'index']);
+
+Route::prefix('/user')->group(function() {
+    Route::get("/index",[UserController::class,'index'])->name("user.index");
+    Route::get("/store",[UserController::class,'store'])->name("name.store");
+    Route::post("/store",[UserController::class,'store'])->name("name.store");
+});
