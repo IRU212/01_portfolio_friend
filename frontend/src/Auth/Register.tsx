@@ -34,7 +34,7 @@ function Register(props: {backURL: string}) {
         data.append("password",password)
 
         axios
-            .post(`${backURL}/user/store`,data)
+            .post(`${backURL}/user/register/store`,data)
             .then(() => {
                 
             })

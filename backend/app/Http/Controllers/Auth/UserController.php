@@ -24,7 +24,9 @@ class UserController extends Controller
      */
     public function index() {
 
-        $data = $this->user->latest()->pluck('id')->first();
+        $login_id = session()->get('login_id');
+
+        $data = $this->user->find($login_id);
 
         return response()->json(
             $data,

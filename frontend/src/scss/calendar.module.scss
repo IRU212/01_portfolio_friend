@@ -1,0 +1,23 @@
+.Calendar{
+    width: 100%;
+    position: relative;
+
+    .title{
+        text-align: center;
+    }
+
+    .table{
+        width: auto;
+        margin: 40px 0 0 7%;
+
+        tr{
+            width: auto;
+
+            th{
+                width: 150px;
+                height: 90px;
+                border: 1px solid #ccc;
+            }
+        }
+    }
+}
