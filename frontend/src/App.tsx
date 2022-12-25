@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router";
 import { BrowserRouter } from "react-router-dom";
 
 // ページコンポーネント
-import Header from "./Header/Header";
+// import Header from "./Header/Header";
 import SideHeader from "./Header/SideHeader";
 import Home from "./Home/Home";
 
@@ -20,7 +20,7 @@ function App() {
       <BrowserRouter>
         <SideHeader />
         <div className={styles.CommonDiv}>
-          <Header />
+          {/* <Header /> */}
           <Routes>
             <Route 
               path="/" 

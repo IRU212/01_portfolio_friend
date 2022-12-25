@@ -1,0 +1,66 @@
+// AuthLayout.tsx
+.AuthLayout{
+    width: auto;
+    height: auto;
+    padding: 0px 20px 20px 20px;
+    border: 1px solid #222;
+    border-radius: 20px;
+
+    .IsLogin{
+        display: flex;
+
+        div{
+            margin: 8px 25px 12px 25px;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// Login.tsx
+.Login{
+
+    div{
+        margin: 0 0 0 0;
+
+        .font{
+            margin: 8px 0 2.6px 0;
+            font-size: 0.7rem;
+        }
+
+        input{
+            margin: 0 0 6px 0;
+        }
+    }
+
+    .Button{
+        margin: 10px 0 0 0;
+        font-size: 0.8rem;
+    }
+
+}
+
+// Register.tsx
+.Register{
+
+    div{
+        margin: 0 0 0 0;
+
+        .font{
+            margin: 8px 0 2.6px 0;
+            font-size: 0.7rem;
+        }
+
+        input{
+            margin: 0 0 6px 0;
+        }
+    }
+
+    .Button{
+        margin: 10px 0 0 0;
+        font-size: 0.8rem;
+    }
+
+}
