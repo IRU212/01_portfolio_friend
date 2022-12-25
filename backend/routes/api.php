@@ -22,8 +22,9 @@ Route::get("/test",[TestController::class,'index']);
 Route::prefix('/user')->group(function() {
     Route::get("/index",[UserController::class,'index'])->name("user.index"); // ログインユーザ情報
 
-    Route::get("/register/store",[UserController::class,'store'])->name("name.store"); // アカウント新規登録
-    Route::post("/register/store",[UserController::class,'store'])->name("name.store"); // アカウント新規登録
+    Route::get("/register/store",[UserController::class,'store'])->name("register.store"); // アカウント新規登録
+    Route::post("/register/store",[UserController::class,'store'])->name("register.store"); // アカウント新規登録
 
-    Route::get("/login/store",[LoginController::class,'store'])->name("name.store"); // アカウントログイン
+    Route::get("/login/store",[LoginController::class,'store'])->name("login.store"); // アカウントログイン
+    Route::post("/login/store",[LoginController::class,'store'])->name("login.store"); // アカウントログイン
 });

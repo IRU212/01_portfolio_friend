@@ -23,8 +23,8 @@ class LoginController extends Controller
      */
     public function store(Request $request) {
 
-        $login_id = $this->user->where('name','name')
-                   ->where('password','password')
+        $login_id = $this->user->where('name',$request->name)
+                   ->where('password',$request->password)
                    ->first()
                    ->id;
 
