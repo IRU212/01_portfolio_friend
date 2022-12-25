@@ -5,7 +5,10 @@ import AuthLayout from '../Auth/AuthLayout';
 import styles from '../scss/header.module.scss'
 // import CommonStyles from '../scss/common.module.scss'
 
-function SideHeader() {
+function SideHeader(props: {backURL: string}) {
+
+    // バックエンド 元URL
+    const backURL = props.backURL;
 
     // ログイン判定 true: ログイン中 false: 未ログイン
     const [IsLogin,setIsLogin] = useState<boolean>(false);
@@ -40,16 +43,19 @@ function SideHeader() {
             }
             {/* 未ログイン時に表示するモーダル */}
             <div className={styles.AuthPosition}>
-                { !IsLogin && <AuthLayout />}
+                { !IsLogin && <AuthLayout backURL={backURL} />}
             </div>
             <div>
-                bbb
+                ホーム
             </div>
             <div>
-                ccc
+                カレンダー
             </div>
             <div>
-                ddd
+                フレンド
+            </div>
+            <div>
+                設定
             </div>
         </div>
     )

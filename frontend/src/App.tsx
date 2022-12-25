@@ -13,12 +13,14 @@ import styles from './scss/common.module.scss'
 function App() {
 
   // バックエンド 元URL
-  const backURL: string = "http://localhost:8000/api/";
+  const backURL: string = "http://localhost:8000/api";
 
   return (
     <div className={styles.Common}>
       <BrowserRouter>
-        <SideHeader />
+        <SideHeader
+          backURL={backURL}
+        />
         <div className={styles.CommonDiv}>
           {/* <Header /> */}
           <Routes>

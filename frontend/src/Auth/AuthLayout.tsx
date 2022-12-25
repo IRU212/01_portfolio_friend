@@ -6,7 +6,10 @@ import Login from './Login'
 import Register from './Register'
 
 // ログイン・新規登録画面のモーダルレイアウト
-function AuthLayout() {
+function AuthLayout(props: {backURL: string}) {
+
+    // バックエンド 元URL
+    const backURL = props.backURL;
 
     /**
      * ログイン・新規登録画面切り替え
@@ -32,7 +35,7 @@ function AuthLayout() {
                     </div>
                     :
                     <div>
-                        <Register />
+                        <Register backURL={backURL} />
                     </div>
                 }
             </div>
